@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<div class="form">
+	<form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+			{{ form.style_oftop.label }}
+			{{ form.style_oftop }}
+			{% if form.stylee_oftop.errors %}
+			<div class="error">
+				{% for error in form.style_oftop.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<br>
+		<div class="form-group">
+			{{ form.colour_oftop.label }}
+			{{ form.colour_oftop }}
+			{% if form.colour_oftop.errors %}
+			<div class="error">
+				{% for error in form.colour_oftop.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+        <br>
+        <div class="form-group">
+			{{ form.style_ofbottom.label }}
+			{{ form.style_ofbottom }}
+			{% if form.style_ofbottom.errors %}
+			<div class="error">
+				{% for error in form.style_ofbottom.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<br>
+		<div class="form-group">
+			{{ form.content.label }}
+			{{ form.content }}
+			{% if form.content.errors %}
+			<div class="error">
+				{% for error in form.content.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+        <br>
+
+
+
+
+
+
+
+
+		<div class="form-group">
+		    {{ form.submit }}
+		</div>
+	</form>
+</div>
+{% endblock body_content %}
+
+

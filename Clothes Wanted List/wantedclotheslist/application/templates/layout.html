@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>{{ title }} </title>
+    </head>
+    
+
+    <body>
+    <div class=navbar>
+                <a href="{{ url_for('home') }}">Home Page</a>
+                <a href="{{ url_for('about') }}">About Page</a>
+                <a href="{{ url_for('Outfit ') }}">Outfit Page</a>
+        
+        {% else %}
+        
+                <a href="{{ url_for('home') }}">Home Page</a>
+                
+                <a href="{{ url_for('about') }}">About Page</a>
+            
+        
+        {% endif %}
+    </div>
+
+    {% block body_content %}{% endblock body_content %}
+
+
+    </body>
+
+</html>
+

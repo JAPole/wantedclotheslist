@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+<h1>this is a home page</h1>
+{% for post in posts %}
+	<div>
+		<h3>{{ post.title }}</h3>
+		<p><b> - Top Description:</b>{{ post.sytlist.first_name }}</p>
+		<p><b> - Bottom Description:</b>{{ post.author.last_name }}</p>
+		<p> -- {{ post.content }}</p>
+	</div>
+{% endfor %}
+	
+{% endblock %}
